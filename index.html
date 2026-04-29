@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al Norte Restaurante — Gijón, Asturias</title>
+  <meta name="description"
+    content="Restaurante Al Norte en la Plaza del Marqués, Gijón. Cocina del Cantábrico con producto de temporada, pinchos y menú del día." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVEGACIÓN
+  ══════════════════════════════════════ -->
+  <header>
+    <nav class="container">
+      <div class="nav-logo">
+        Al Norte
+        <span>Plaza del Marqués · Gijón</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-contenido">
+      <p class="hero-supertitulo">Restaurante · Gijón</p>
+      <h1 class="hero-titulo">Al <em>Norte</em></h1>
+      <p class="hero-subtitulo">Cocina del Cantábrico · Producto de temporada · Gijón</p>
+      <a href="#carta" class="btn-primario">Ver nuestros platos</a>
+    </div>
+    <div class="scroll-indicador">
+      <span>·</span>
+      <div class="scroll-flecha"></div>
+    </div>
+  </section>
+
+
+
+  <!-- ══════════════════════════════════════
+       CARTA
+  ══════════════════════════════════════ -->
+  <section id="carta" class="seccion">
+    <div class="container">
+      <div style="text-align:center">
+        <p class="titulo-seccion">Nuestra carta</p>
+        <div class="linea-decorativa centrada"></div>
+      </div>
+      <p class="carta-intro">
+        Producto de temporada, sabores del norte y una cocina honesta. Desde clásicos cantábricos
+        hasta propuestas creativas y opciones vegetarianas.
+      </p>
+
+      <!-- Tabs de categorías -->
+      <div class="tabs" role="tablist">
+        <button class="tab activo" role="tab" data-panel="entrantes">Entrantes</button>
+        <button class="tab" role="tab" data-panel="carne">Carne</button>
+        <button class="tab" role="tab" data-panel="pescado">Pescado</button>
+        <button class="tab" role="tab" data-panel="fabada">Fabada y Combinados</button>
+        <button class="tab" role="tab" data-panel="postres">Postres</button>
+        <button class="tab" role="tab" data-panel="vinos">Vinos</button>
+      </div>
+      <!-- Tabs de categorías para móvil -->
+      <div class="tabs tabs-moviles" role="tablist" aria-label="Cambiar sección de la carta">
+        <button class="tab activo" role="tab" data-panel="entrantes">Entrantes</button>
+        <button class="tab" role="tab" data-panel="carne">Carne</button>
+        <button class="tab" role="tab" data-panel="pescado">Pescado</button>
+        <button class="tab" role="tab" data-panel="fabada">Fabada y combinados</button>
+        <button class="tab" role="tab" data-panel="postres">Postres</button>
+        <button class="tab" role="tab" data-panel="vinos">Vinos</button>
+      </div>
+
+      <!-- ENTRANTES -->
+      <div class="panel-carta activo" id="panel-entrantes">
+        <div class="menu-grid">
+          <div class="plato" data-alergenos="huevos,pescado,sulfitos">
+            <div class="plato-info">
+              <h4>Ensalada Mixta</h4>
+              <p>Mixed Salad</p>
+            </div>
+            <span class="plato-precio">16 €</span>
+          </div>
+          <div class="plato" data-alergenos="gluten">
+            <div class="plato-info">
+              <h4>Jamón ibérico</h4>
+              <p>Iberian ham</p>
+            </div>
+            <span class="plato-precio">22 €</span>
+          </div>
+          <div class="plato" data-alergenos="">
+            <div class="plato-info">
+              <h4>Cecina con aceite de oliva</h4>
+              <p>Jerky with olive oil</p>
+            </div>
+            <span class="plato-precio">19 €</span>
+          </div>
+          <div class="plato" data-alergenos="gluten">
+            <div class="plato-info">
+              <h4>Croquetas de Jamón (12 uds)</h4>
+              <p>Ham Croquettes</p>
+            </div>
+            <span class="plato-precio">14 €</span>
+          </div>
+          <div class="plato" data-alergenos="huevos,sulfitos,lacteos">
+            <div class="plato-info">
+              <h4>Pastel de Cabracho</h4>
+              <p>Scorpion fish pie</p>
+            </div>
+            <span class="plato-precio">16 €</span>
+          </div>
+          <div class="plato" data-alergenos="pescado">
+            <div class="plato-info">
+              <h4>Cebollas rellenas (bonito) (2 uds)</h4>
+              <p>Stuffed onions (tuna)</p>
+            </div>
+            <span class="plato-precio">15 €</span>
+          </div>
+          <div class="plato" data-alergenos="lacteos,sulfitos">
+            <div class="plato-info">
+              <h4>Tabla de Quesos</h4>
+              <p>Cheese Board: Cabrales, Gamoneu, Pria, Vidiago, Afuega L'Pitu and apple jam</p>
+            </div>
+            <span class="plato-precio">17 €</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARNE -->
+      <div class="panel-carta" id="panel-carne">
+        <div class="menu-grid">
+          <div class="plato" data-alergenos="gluten,lacteos,huevos">
+            <div class="plato-info">
+              <h4>Ternera</h4>
+              <p>Veal entrecote</p>
+            </div>
+            <span class="plato-precio">24 €</span>
+          </div>
+          <div class="plato" data-alergenos="gluten,lacteos,huevos">
+            <div class="plato-info">
+              <h4>Cachopo tradicional</h4>
+              <p>Traditional cachopo</p>
+            </div>
+            <span class="plato-precio">24 €</span>
+          </div>
+          <div class="plato" data-alergenos="">
+            <div class="plato-info">
+              <h4>Pollo al ajillo</h4>
+              <p>Garlic chicken</p>
+            </div>
+            <span class="plato-precio">16 €</span>
+          </div>
+          <div class="plato" data-alergenos="">
+            <div class="plato-info">
+              <h4>Filete de ternera</h4>
+              <p>Veal fillet</p>
+            </div>
+            <span class="plato-precio">18 €</span>
+          </div>
+          <div class="plato" data-alergenos="gluten">
+            <div class="plato-info">
+              <h4>Escalopines al cabrales</h4>
+              <p>Veal escalopes with cabrales cheese</p>
+            </div>
+            <span class="plato-precio">19 €</span>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top:0.5rem; font-size:0.95rem; color:rgba(255, 255, 255, 0.75)">Todas las
+          carnes van acompañadas de patatas.</p>
+        <p style="text-align: center; margin-top:0.5rem; font-size:0.95rem; color:rgba(255, 255, 255, 0.75)">All meats
+          are accompanied by fried potatoes.</p>
+      </div>
+
+      <!-- PESCADO -->
+      <div class="panel-carta" id="panel-pescado">
+        <div class="menu-grid">
+          <div class="plato" data-alergenos="moluscos">
+            <div class="plato-info">
+              <h4>Calamares Fritos</h4>
+              <p>Fried Squids</p>
+            </div>
+            <span class="plato-precio">20 €</span>
+          </div>
+          <div class="plato" data-alergenos="moluscos">
+            <div class="plato-info">
+              <h4>Chipirones a la plancha (10 uds)</h4>
+              <p>Grilled baby squids</p>
+            </div>
+            <span class="plato-precio">18 €</span>
+          </div>
+          <div class="plato" data-alergenos="crustaceo">
+            <div class="plato-info">
+              <h4>Gambón plancha (10 uds)</h4>
+              <p>Grilled king prawns</p>
+            </div>
+            <span class="plato-precio">20 €</span>
+          </div>
+          <div class="plato" data-alergenos="moluscos">
+            <div class="plato-info">
+              <h4>Zamburiñas (10 uds)</h4>
+              <p>Scallops</p>
+            </div>
+            <span class="plato-precio">20 €</span>
+          </div>
+          <div class="plato" data-alergenos="moluscos">
+            <div class="plato-info">
+              <h4>Mejillones al vapor (12 uds)</h4>
+              <p>Steamed mussels</p>
+            </div>
+            <span class="plato-precio">14 €</span>
+          </div>
+          <div class="plato" data-alergenos="moluscos,gluten">
+            <div class="plato-info">
+              <h4>Mejillones marinera (12 uds)</h4>
+              <p>Mussels in marinara sauce</p>
+            </div>
+            <span class="plato-precio">16 €</span>
+          </div>
+          <div class="plato" data-alergenos="gluten,pescado">
+            <div class="plato-info">
+              <h4>Fritos de bacalao (10 uds)</h4>
+              <p>Fried cod bites</p>
+            </div>
+            <span class="plato-precio">20 €</span>
+          </div>
+          <div class="plato" data-alergenos="moluscos">
+            <div class="plato-info">
+              <h4>Pulpo con cachelos</h4>
+              <p>Octopus with boiled potatoes</p>
+            </div>
+            <span class="plato-precio">22 €</span>
+          </div>
+          <div class="plato" data-alergenos="moluscos">
+            <div class="plato-info">
+              <h4>Navajas</h4>
+              <p>Razor clams</p>
+            </div>
+            <span class="plato-precio">17 €</span>
+          </div>
+        </div>
+      </div>
+      <!-- FABADA ASTURIANA -->
+      <div class="panel-carta" id="panel-fabada">
+        <div class="menu-grid">
+          <div class="plato" data-alergenos="gluten">
+            <div class="plato-info">
+              <h4>Fabada Asturiana</h4>
+              <p>Asturian bean stew</p>
+            </div>
+            <span class="plato-precio">19 €</span>
+          </div>
+          <div class="plato" data-alergenos="moluscos">
+            <div class="plato-info">
+              <h4>Fabada con almejas</h4>
+              <p>Beans with clams</p>
+            </div>
+            <span class="plato-precio">21 €</span>
+          </div>
+          <div class="plato" data-alergenos="huevos">
+            <div class="plato-info">
+              <h4>Filete de ternera con huevos fritos, ensalada, patatas</h4>
+              <p>Veal fillet with fried eggs, salad, chips</p>
+            </div>
+            <span class="plato-precio">19 €</span>
+          </div>
+          <div class="plato" data-alergenos="sulfitos">
+            <div class="plato-info">
+              <h4>Lomo adobado plancha, arroz blanco, ensalada y patatas</h4>
+              <p>Marinated pork loin, white rice, salad and potatoes</p>
+            </div>
+            <span class="plato-precio">18 €</span>
+          </div>
+        </div>
+      </div>
+      <!-- PLATO COMBINADO -->
+      <div class="panel-carta" id="panel-combinado">
+        <div class="menu-grid">
+
+        </div>
+      </div>
+
+      <!-- POSTRES -->
+      <div class="panel-carta" id="panel-postres">
+        <div class="menu-grid">
+          <div class="plato" data-alergenos="lacteos">
+            <div class="plato-info">
+              <h4>Arroz con leche (casero)</h4>
+              <p>Homemade rice pudding</p>
+            </div>
+            <span class="plato-precio">6 €</span>
+          </div>
+          <div class="plato" data-alergenos="lacteos,huevos">
+            <div class="plato-info">
+              <h4>Flan de huevo (casero)</h4>
+              <p>Homemade egg flan</p>
+            </div>
+            <span class="plato-precio">6 €</span>
+          </div>
+          <div class="plato" data-alergenos="lacteos,huevos,gluten">
+            <div class="plato-info">
+              <h4>Tarta de queso (casero)</h4>
+              <p>Homemade cheesecake</p>
+            </div>
+            <span class="plato-precio">7 €</span>
+          </div>
+          <div class="plato" data-alergenos="lacteos,huevos,gluten">
+            <div class="plato-info">
+              <h4>Tarta helada</h4>
+              <p>Ice cream cake</p>
+            </div>
+            <span class="plato-precio">5 €</span>
+          </div>
+          <div class="plato" data-alergenos="lacteos,huevos,gluten">
+            <div class="plato-info">
+              <h4>Tiramisú</h4>
+              <p>Tiramisu</p>
+            </div>
+            <span class="plato-precio">5 €</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VINOS -->
+      <div class="panel-carta" id="panel-vinos">
+        <div class="menu-grid">
+          <div class="plato">
+            <div class="plato-info">
+              <h4>Ramón Bilbao - Rioja Crianza</h4>
+              <p>Red wine</p>
+            </div>
+            <span class="plato-precio">20 €</span>
+          </div>
+          <div class="plato">
+            <div class="plato-info">
+              <h4>Marqués de Vitoria - Rioja Crianza</h4>
+              <p>Red wine</p>
+            </div>
+            <span class="plato-precio">20 €</span>
+          </div>
+          <div class="plato">
+            <div class="plato-info">
+              <h4>Real Agrado - Rioja Crianza</h4>
+              <p>Red wine</p>
+            </div>
+            <span class="plato-precio">20 €</span>
+          </div>
+          <div class="plato">
+            <div class="plato-info">
+              <h4>Fuentespina - Ribera del Duero Crianza</h4>
+              <p>Red wine</p>
+            </div>
+            <span class="plato-precio">20 €</span>
+          </div>
+          <div class="plato">
+            <div class="plato-info">
+              <h4>Fuentespina - Ribera del Duero Roble</h4>
+              <p>Red wine</p>
+            </div>
+            <span class="plato-precio">17 €</span>
+          </div>
+          <div class="plato">
+            <div class="plato-info">
+              <h4>Rueda - Blanco</h4>
+              <p>White wine</p>
+            </div>
+            <span class="plato-precio">17 €</span>
+          </div>
+          <div class="plato">
+            <div class="plato-info">
+              <h4>Albariño - Blanco</h4>
+              <p>White wine</p>
+            </div>
+            <span class="plato-precio">19 €</span>
+          </div>
+          <div class="plato">
+            <div class="plato-info">
+              <h4>Godello - Blanco</h4>
+              <p>White wine</p>
+            </div>
+            <span class="plato-precio">20 €</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabs de categorías para móvil -->
+      <div class="tabs tabs-moviles" role="tablist" aria-label="Cambiar sección de la carta">
+        <button class="tab activo" role="tab" data-panel="entrantes">Entrantes</button>
+        <button class="tab" role="tab" data-panel="carne">Carne</button>
+        <button class="tab" role="tab" data-panel="pescado">Pescado</button>
+        <button class="tab" role="tab" data-panel="fabada">Fabada y combinados</button>
+        <button class="tab" role="tab" data-panel="postres">Postres</button>
+        <button class="tab" role="tab" data-panel="vinos">Vinos</button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       CONTACTO
+  ══════════════════════════════════════ -->
+  <section id="contacto" class="seccion">
+    <div class="container">
+      <p class="titulo-seccion">Encuéntranos</p>
+      <div class="linea-decorativa"></div>
+
+      <div class="contacto-grid">
+
+        <!-- Información de contacto -->
+        <div>
+          <div class="info-item">
+            <span class="info-icono">🕐</span>
+            <div>
+              <h4>Horario</h4>
+              <p>
+                <em style="font-size:0.8rem; color:rgba(176,168,152,0.6)">Lunes cerrado</em><br>
+                Martes a Viernes<br>
+                Almuerzo: 13:00 – 16:00 h<br>
+                Cena: 20:00 – 23:30 h<br><br>
+                Sábado y Domingo<br>
+                Almuerzo: 13:00 – 16:00 h<br>
+                Cena: 20:00 – 23:30 h<br>
+
+              </p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icono">📍</span>
+            <div>
+              <h4>Dirección</h4>
+              <p>Plaza del Marqués, Gijón<br>Asturias, España</p>
+            </div>
+          </div>
+
+
+
+          <div class="info-item">
+            <span class="info-icono">📞</span>
+            <div>
+              <h4>Teléfono</h4>
+              <a href="tel:+34984089424">984 08 94 24</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icono">📧</span>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:alnorterestaurante@gmail.com">alnorterestaurante@gmail.com</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mapa de ubicación -->
+        <div class="mapa-reserva">
+          <h3>Ubicación</h3>
+          <p class="mapa-texto">Cómo llegar a la Plaza del Marqués, 9 en Gijón.</p>
+          <div class="mapa-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.9531077500305!2d-5.66584048772705!3d43.54501937098695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367c662488b681%3A0xebdca5cc39decc4c!2sBar%20Al%20Norte!5e0!3m2!1ses!2ses!4v1777475885421!5m2!1ses!2ses"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       RESEÑAS
+  ══════════════════════════════════════ -->
+  <section id="resenas" class="seccion">
+    <div class="container">
+      <p class="titulo-seccion">Lo que dicen</p>
+      <div class="linea-decorativa centrada"></div>
+
+      <div class="resenas-grid">
+        <div class="resena-card">
+          <div class="estrellas">★★★★★</div>
+          <blockquote>"Muy buen sitio, la merluza estaba exquisita y buen trato del personal es de diez. Volveremos sin
+            duda."</blockquote>
+          <p class="resena-autor">— Reseña Tripadvisor.</p>
+        </div>
+        <div class="resena-card">
+          <div class="estrellas">★★★★★</div>
+          <blockquote>"Carta variada y los precios muy razonables para la calidad y zona. El pulpo muy rico."
+          </blockquote>
+          <p class="resena-autor">— Reseña Google Maps.</p>
+        </div>
+        <div class="resena-card">
+          <div class="estrellas">★★★★☆</div>
+          <blockquote>"Ambiente acogedor y cocina del norte. Las croquetas caseras son de las mejores que he probado."
+          </blockquote>
+          <p class="resena-autor">— Reseña Tripadvisor.</p>
+        </div>
+
+        <div class="resena-card">
+          <div class="estrellas">★★★★☆</div>
+          <blockquote>"Llegamos de un crucero y fue el sitio que visitamos, muy recomendado, al lado de la plaza mayor."
+          </blockquote>
+          <p class="resena-autor">— Reseña Google Maps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-marca">
+          <div class="nav-logo">
+            Al Norte
+            <span>Plaza del Marqués · Gijón</span>
+          </div>
+          <p class="footer-descripcion">
+            Cocina tradicional asturiana del Cantábrico con respeto absoluto al producto.
+            Desde 2021 en el corazón del casco antiguo de Gijón.
+          </p>
+        </div>
+        <div>
+          <p class="footer-titulo">Navegación</p>
+          <ul class="footer-links">
+            <li><a href="#carta">Carta</a></li>
+            <li><a href="#resenas">Reseñas</a></li>
+            <li><a href="#contacto">Reservar</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-titulo">Síguenos</p>
+          <div class="redes">
+            <a href="https://www.instagram.com/alnorte_restaurante" target="_blank" rel="noopener" class="red-social"
+              aria-label="Instagram">📷</a>
+            <title>Instagram</title>
+            <a href="https://www.instagram.com/alnorte_restaurante" class="footer-descripcion">@alnorte_restaurante</a>
+          </div>
+
+          <div class="email">
+            <a href="mailto:alnorterestaurante@gmail.com" target="_blank" rel="noopener" class="red-social"
+              aria-label="Email">📧</a>
+            <title>Email</title>
+            <a href="mailto:alnorterestaurante@gmail.com" class="footer-descripcion">alnorterestaurante@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 Al Norte Restaurante · Plaza del Marqués, Gijón · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════ -->
+  <script>
+    // ─── Menú hamburguesa ───────────────────
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    const allergenAssets = {
+      altramuces: 'assets/altramuces alergenos.png',
+      apio: 'assets/apio alergenos.png',
+      cacahuete: 'assets/cacahuete alergenos.png',
+      crustaceo: 'assets/crustaceo alergeno.png',
+      gluten: 'assets/gluten alergeno.png',
+      huevos: 'assets/huevos alergenos.png',
+      lacteos: 'assets/lacteos alergenos.png',
+      moluscos: 'assets/moluscos alergenos.png',
+      mostaza: 'assets/mostaza alergenos.png',
+      pescado: 'assets/pescados alergenos.png',
+      soja: 'assets/soja alergenos.png',
+      sulfitos: 'assets/sulfitos alergenos.png',
+      sesamo: 'assets/granos de sesamo alergenos.png',
+      frutos_cascara: 'assets/frutos de cascara alergenos.png'
+    };
+
+    // Inserta el bloque de alérgenos en cada plato usando el PNG correspondiente.
+    document.querySelectorAll('#carta .plato').forEach(plato => {
+      if (plato.querySelector('.plato-alergenos')) return;
+
+      const allergenList = (plato.dataset.alergenos || '')
+        .split(',')
+        .map(allergen => allergen.trim())
+        .filter(Boolean)
+        .slice(0, 3);
+
+      if (allergenList.length === 0) return;
+
+      const allergenRow = document.createElement('div');
+      allergenRow.className = 'plato-alergenos';
+      allergenRow.setAttribute('aria-label', `Alergenos: ${allergenList.join(', ')}`);
+
+      allergenList.forEach(allergen => {
+        const allergenIcon = document.createElement('img');
+        allergenIcon.src = allergenAssets[allergen] ?? 'assets/moluscos alergenos.png';
+        allergenIcon.alt = 'Icono de alérgeno';
+        allergenIcon.loading = 'lazy';
+        allergenRow.appendChild(allergenIcon);
+      });
+
+      plato.appendChild(allergenRow);
+    });
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('activo');
+      navLinks.classList.toggle('abierto');
+    });
+
+    // Cierra el menú al hacer click en un enlace
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('activo');
+        navLinks.classList.remove('abierto');
+      });
+    });
+
+    // ─── Tabs de la carta ───────────────────
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Desactiva todos los tabs y paneles
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('activo'));
+        document.querySelectorAll('.panel-carta').forEach(p => p.classList.remove('activo'));
+
+        // Activa el tab y su panel
+        tab.classList.add('activo');
+        const panelId = 'panel-' + tab.dataset.panel;
+        document.getElementById(panelId).classList.add('activo');
+      });
+    });
+
+    // ─── Scroll suave para hash links ───────
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ─── Header más opaco al hacer scroll ───
+    window.addEventListener('scroll', () => {
+      document.querySelector('header').style.background =
+        window.scrollY > 60
+          ? 'rgba(14,26,20,0.98)'
+          : 'rgba(14,26,20,0.92)';
+    });
+
+    // ─── Fecha mínima = hoy ──────────────────
+    document.getElementById('fecha').min = new Date().toISOString().split('T')[0];
+  </script>
+
+</body>
+
+</html>
