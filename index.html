@@ -61,8 +61,7 @@
         <div class="linea-decorativa centrada"></div>
       </div>
       <p class="carta-intro">
-        Producto de temporada, sabores del norte y una cocina honesta. Desde clásicos cantábricos
-        hasta propuestas creativas y opciones vegetarianas.
+        Producto de temporada, sabores del norte y una cocina tradicional asturiana. Fabadas y cachopos son nuestra especialidad.
       </p>
 
       <!-- Tabs de categorías -->
@@ -414,8 +413,10 @@
   ══════════════════════════════════════ -->
   <section id="contacto" class="seccion">
     <div class="container">
-      <p class="titulo-seccion">Encuéntranos</p>
-      <div class="linea-decorativa"></div>
+      <div style="text-align:center">
+        <p class="titulo-seccion">Encuéntranos</p>
+        <div class="linea-decorativa centrada"></div>
+      </div>
 
       <div class="contacto-grid">
 
@@ -459,7 +460,7 @@
             <span class="info-icono">📧</span>
             <div>
               <h4>Email</h4>
-              <a href="mailto:alnorterestaurante@gmail.com">alnorterestaurante@gmail.com</a>
+              <a href="mailto:alnorterestaurante@gmail.com">alnorterestaurante<br>@gmail.com</a>
             </div>
           </div>
 
@@ -543,8 +544,8 @@
           <p class="footer-titulo">Navegación</p>
           <ul class="footer-links">
             <li><a href="#carta">Carta</a></li>
+            <li><a href="#contacto">Contacto</a></li>
             <li><a href="#resenas">Reseñas</a></li>
-            <li><a href="#contacto">Reservar</a></li>
           </ul>
         </div>
         <div>
@@ -648,13 +649,33 @@
       });
     });
 
-    // ─── Scroll suave para hash links ───────
+    // ─── Scroll suave para hash links con offset (evita secciones cortadas en móvil) ───────
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const href = a.getAttribute('href');
+        const target = document.querySelector(href);
+        if (!target) return;
+
+        // Evitar comportamiento por defecto y desplazar a la posición objetivo con offset
+        e.preventDefault();
+
+        const scrollToTarget = () => {
+          const header = document.querySelector('header');
+          const headerHeight = header ? header.offsetHeight : 0;
+          const extraOffset = 8; // espacio adicional para que no quede justo pegado
+          const top = target.getBoundingClientRect().top + window.pageYOffset - (headerHeight + extraOffset);
+          window.scrollTo({ top, behavior: 'smooth' });
+        };
+
+        // Si el menú móvil está abierto, ciérralo primero y espera un instante antes de hacer scroll
+        const navIsOpen = navLinks.classList.contains('abierto');
+        if (navIsOpen) {
+          hamburger.classList.remove('activo');
+          navLinks.classList.remove('abierto');
+          // Delay corto para permitir que la transición/ocultado del panel termine
+          setTimeout(scrollToTarget, 80);
+        } else {
+          scrollToTarget();
         }
       });
     });

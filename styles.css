@@ -476,7 +476,7 @@ nav {
 }
 
 @media (max-width: 640px) {
-  .container { padding: 0 1.2rem; }
+  .container { padding: 0 1.6rem; }
 
   .tabs { display: none; }
 
@@ -817,19 +817,59 @@ footer {
 }
 
 @media (max-width: 640px) {
+  /* Menú móvil: ajustar posición para que el primer item quede parcialmente cortado,
+     eliminar el fondo verde oscuro y reducir tamaño con mayor contraste */
   .nav-links {
     display: none;
     position: fixed;
-    inset: 0;
-    background: rgba(14,26,20,0.98);
+    left: 0;
+    right: 0;
+    top: 0; /* cubrir desde la parte superior */
+    bottom: 0;
+    height: 100vh; /* asegurar que ocupe toda la pantalla */
+    z-index: 190; /* por encima del header */
+    background: rgba(0,0,0,0.55); /* menos verdoso y más neutro */
+    backdrop-filter: blur(6px);
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
+    justify-content: flex-start; /* empezar desde arriba para controlar el corte */
+    gap: 1rem; /* más compacto */
+    padding-top: 6vh; /* espacio desde la parte superior */
+    padding-bottom: 3rem;
+    transform: translateY(-18px); /* desplaza ligeramente hacia arriba para que el primer item quede cortado */
+  }
+  /* permitir scroll si el contenido excede la pantalla */
+  .nav-links.abierto { display: flex; overflow-y: auto; }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: block; width: 100%; text-align: center; padding: 0.8rem 1rem; }
+  /* capa de fondo opaca que cubre todo el panel y queda detrás de los enlaces */
+  .nav-links::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 1;
   }
   .nav-links.abierto { display: flex; }
-  .nav-links a { font-size: 1.2rem; }
+  .nav-links a {
+    font-size: 0.95rem; /* tamaño menor */
+    color: var(--color-crema); /* color de alto contraste */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    position: relative;
+    z-index: 2; /* sobre la capa de fondo */
+  }
+  .nav-links a:hover {
+    background: rgba(201,168,76,0.08);
+    color: var(--color-dorado);
+  }
   .hamburger { display: flex; }
+  .hamburger { position: relative; z-index: 220; }
+  .hamburger.activo { z-index: 230; }
   .campos-dobles { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .hero-titulo { font-size: clamp(2.8rem, 14vw, 4.5rem); }
@@ -838,6 +878,11 @@ footer {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
+
+  /* Evita que precio y enlaces queden pegados al borde en móvil */
+  .plato { padding-right: 1.2rem; }
+  .plato-precio { min-width: 64px; }
+  #contacto .info-item a { display: inline-block; padding-right: 0.6rem; }
 
   #contacto .contacto-grid > div:first-child {
     display: grid;
