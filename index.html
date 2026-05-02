@@ -23,6 +23,7 @@
       </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="#carta">Carta</a></li>
+        <li><a href="#menu">Menú</a></li>
         <li><a href="#contacto">Contacto</a></li>
         <li><a href="#resenas">Reseñas</a></li>
       </ul>
@@ -39,9 +40,10 @@
   <section id="hero">
     <div class="hero-contenido">
       <p class="hero-supertitulo">Restaurante · Gijón</p>
-      <h1 class="hero-titulo">Al <em>Norte</em></h1>
-      <p class="hero-subtitulo">Cocina del Cantábrico · Producto de temporada · Gijón</p>
-      <a href="#carta" class="btn-primario">Ver nuestros platos</a>
+      <h1 class="hero-titulo"><em>Al Norte</em></h1>
+      <p class="hero-subtitulo">Cocina tradicional asturiana · Gijón</p>
+      <a href="#carta" class="btn-primario">CARTA</a>
+      <a href="#menu" class="btn-primario">MENU</a>
     </div>
     <div class="scroll-indicador">
       <span>·</span>
@@ -61,7 +63,7 @@
         <div class="linea-decorativa centrada"></div>
       </div>
       <p class="carta-intro">
-        Producto de temporada, sabores del norte y una cocina tradicional asturiana. Fabadas y cachopos son nuestra especialidad.
+        Sabores del norte y una cocina tradicional asturiana. Fabadas y cachopos son nuestra especialidad. Vistas al puerto deportivo desde el casco antiguo de Gijón.
       </p>
 
       <!-- Tabs de categorías -->
@@ -114,7 +116,7 @@
             </div>
             <span class="plato-precio">14 €</span>
           </div>
-          <div class="plato" data-alergenos="huevos,sulfitos,lacteos">
+          <div class="plato" data-alergenos="huevos,pescado,lacteos">
             <div class="plato-info">
               <h4>Pastel de Cabracho</h4>
               <p>Scorpion fish pie</p>
@@ -244,14 +246,14 @@
           </div>
           <div class="plato" data-alergenos="moluscos">
             <div class="plato-info">
-              <h4>Navajas</h4>
+              <h4>Navajas (10 uds)</h4>
               <p>Razor clams</p>
             </div>
             <span class="plato-precio">17 €</span>
           </div>
         </div>
       </div>
-      <!-- FABADA ASTURIANA -->
+      <!-- FABADA ASTURIANA Y PLATOS COMBINADOS -->
       <div class="panel-carta" id="panel-fabada">
         <div class="menu-grid">
           <div class="plato" data-alergenos="gluten">
@@ -277,7 +279,7 @@
           </div>
           <div class="plato" data-alergenos="sulfitos">
             <div class="plato-info">
-              <h4>Lomo adobado plancha, arroz blanco, ensalada y patatas</h4>
+              <h4>Lomo adobado plancha, tortilla francesa, ensalada y patatas</h4>
               <p>Marinated pork loin, white rice, salad and potatoes</p>
             </div>
             <span class="plato-precio">18 €</span>
@@ -391,6 +393,13 @@
             </div>
             <span class="plato-precio">20 €</span>
           </div>
+          <div class="plato">
+            <div class="plato-info">
+              <h4>Navarra - Rosado</h4>
+              <p>Rosé wine</p>
+            </div>
+            <span class="plato-precio">17 €</span>
+          </div>
         </div>
       </div>
 
@@ -402,6 +411,48 @@
         <button class="tab" role="tab" data-panel="fabada">Fabada y combinados</button>
         <button class="tab" role="tab" data-panel="postres">Postres</button>
         <button class="tab" role="tab" data-panel="vinos">Vinos</button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       MENÚ
+  ══════════════════════════════════════ -->
+  <section id="menu" class="seccion">
+    <div class="container">
+      <div style="text-align:center">
+        <p class="titulo-seccion">Menú del día</p>
+        <div class="linea-decorativa centrada"></div>
+      </div>
+
+      <div class="menu-listas">
+        <!-- PRIMEROS -->
+        <div class="lista-menu">
+          <h3 class="subtitulo-menu">Primeros</h3>
+          <ul class="platos-lista">
+            <li>Arroz caldoso de mariscos</li><!-- pescado, sulfitos -->
+            <li>Paella marinera</li><!-- crustaceos, moluscos -->
+            <li>Fabada asturiana</li><!-- gluten -->
+            <li>Ensalada mixta</li>
+            <li>Pastel de cabracho</li><!-- pescado, huevo, lacteo, sulfitos -->
+          </ul>
+        </div>
+
+        <!-- SEGUNDOS -->
+        <div class="lista-menu">
+          <h3 class="subtitulo-menu">Segundos</h3>
+          <ul class="platos-lista">
+            <li>Cachopo</li><!-- gluten, lacteo, huevo -->
+            <li>Entrecot</li>
+            <li>Pescado del día</li> <!-- pescado, gluten, huevo -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-cierre">
+        <p class="menu-texto">Postre + Bebida</p>
       </div>
 
     </div>
@@ -427,13 +478,13 @@
             <div>
               <h4>Horario</h4>
               <p>
-                <em style="font-size:0.8rem; color:rgba(176,168,152,0.6)">Lunes cerrado</em><br>
-                Martes a Viernes<br>
-                Almuerzo: 13:00 – 16:00 h<br>
-                Cena: 20:00 – 23:30 h<br><br>
-                Sábado y Domingo<br>
-                Almuerzo: 13:00 – 16:00 h<br>
-                Cena: 20:00 – 23:30 h<br>
+                <em style="font-size:0.8rem; color:rgba(176,168,152,0.6)">Jueves cerrado</em><br><br>
+                Lunes a Miércoles<br>
+                De 12:00 a 22:00<br><br>
+                Viernes y Sábado<br>
+                De 12:00 a 24:00<br><br>
+                Domingo<br>
+                De 12:00 a 17:00<br>
 
               </p>
             </div>
@@ -447,7 +498,8 @@
           </div>
 
 
-
+          
+          <!-- ══════════════════════════════════════ telefono y email
           <div class="info-item">
             <span class="info-icono">📞</span>
             <div>
@@ -463,7 +515,9 @@
               <a href="mailto:alnorterestaurante@gmail.com">alnorterestaurante<br>@gmail.com</a>
             </div>
           </div>
-
+          
+          RESEÑAS
+     ══════════════════════════════════════ -->
         </div>
 
         <!-- Mapa de ubicación -->
@@ -495,19 +549,19 @@
       <div class="resenas-grid">
         <div class="resena-card">
           <div class="estrellas">★★★★★</div>
-          <blockquote>"Muy buen sitio, la merluza estaba exquisita y buen trato del personal es de diez. Volveremos sin
+          <blockquote>"Muy buen sitio, la comida del menu estaba buena y el trato del personal es de diez. Volveremos sin
             duda."</blockquote>
           <p class="resena-autor">— Reseña Tripadvisor.</p>
         </div>
         <div class="resena-card">
           <div class="estrellas">★★★★★</div>
-          <blockquote>"Carta variada y los precios muy razonables para la calidad y zona. El pulpo muy rico."
+          <blockquote>"Carta variada y los precios muy razonables para la calidad y zona. El cachopo muy rico."
           </blockquote>
           <p class="resena-autor">— Reseña Google Maps.</p>
         </div>
         <div class="resena-card">
           <div class="estrellas">★★★★☆</div>
-          <blockquote>"Ambiente acogedor y cocina del norte. Las croquetas caseras son de las mejores que he probado."
+          <blockquote>"Ambiente acogedor y tienen platos típicos. Pedimos fritos de bacalao y nos gustaron mucho."
           </blockquote>
           <p class="resena-autor">— Reseña Tripadvisor.</p>
         </div>
@@ -536,14 +590,15 @@
             <span>Plaza del Marqués · Gijón</span>
           </div>
           <p class="footer-descripcion">
-            Cocina tradicional asturiana del Cantábrico con respeto absoluto al producto.
-            Desde 2021 en el corazón del casco antiguo de Gijón.
+            Cocina tradicional asturiana del Cantábrico con vistas al puerto deportivo.
+            En el corazón del casco antiguo de Gijón.
           </p>
         </div>
         <div>
           <p class="footer-titulo">Navegación</p>
           <ul class="footer-links">
             <li><a href="#carta">Carta</a></li>
+            <li><a href="#menu">Menú</a></li>
             <li><a href="#contacto">Contacto</a></li>
             <li><a href="#resenas">Reseñas</a></li>
           </ul>
@@ -556,13 +611,15 @@
             <title>Instagram</title>
             <a href="https://www.instagram.com/alnorte_restaurante" class="footer-descripcion">@alnorte_restaurante</a>
           </div>
-
+          <!-- ════════════════ email ══════════════════════
           <div class="email">
             <a href="mailto:alnorterestaurante@gmail.com" target="_blank" rel="noopener" class="red-social"
               aria-label="Email">📧</a>
             <title>Email</title>
             <a href="mailto:alnorterestaurante@gmail.com" class="footer-descripcion">alnorterestaurante@gmail.com</a>
           </div>
+     ══════════════════════════════════════ -->
+
         </div>
       </div>
       <p class="footer-copy">© 2025 Al Norte Restaurante · Plaza del Marqués, Gijón · Todos los derechos reservados</p>
@@ -595,6 +652,38 @@
       frutos_cascara: 'assets/frutos de cascara alergenos.png'
     };
 
+    const menuEnglishNames = {
+      'Arroz caldoso de mariscos': 'Soupy seafood rice',
+      'Paella marinera': 'Seafood paella',
+      'Fabada asturiana': 'Asturian bean stew',
+      'Ensalada mixta': 'Mixed salad',
+      'Pastel de cabracho': 'Scorpionfish cake',
+      Cachopo: 'Cachopo (breaded stuffed veal)',
+      Entrecot: 'Entrecote / Ribeye steak',
+      'Pescado del día': 'Fish of the day'
+    };
+
+    const allergenAliases = {
+      crustaceos: 'crustaceo',
+      crustaceo: 'crustaceo',
+      huevos: 'huevos',
+      huevo: 'huevos',
+      lacteos: 'lacteos',
+      lacteo: 'lacteos',
+      moluscos: 'moluscos',
+      molusco: 'moluscos',
+      pescados: 'pescado',
+      pescado: 'pescado',
+      sulfitos: 'sulfitos',
+      gluten: 'gluten'
+    };
+
+    const resolveAllergenAsset = allergen => {
+      const normalized = (allergen || '').toLowerCase().trim();
+      const key = allergenAliases[normalized] ?? normalized;
+      return allergenAssets[key] ?? 'assets/moluscos alergenos.png';
+    };
+
     // Inserta el bloque de alérgenos en cada plato usando el PNG correspondiente.
     document.querySelectorAll('#carta .plato').forEach(plato => {
       if (plato.querySelector('.plato-alergenos')) return;
@@ -613,13 +702,69 @@
 
       allergenList.forEach(allergen => {
         const allergenIcon = document.createElement('img');
-        allergenIcon.src = allergenAssets[allergen] ?? 'assets/moluscos alergenos.png';
+        allergenIcon.src = resolveAllergenAsset(allergen);
         allergenIcon.alt = 'Icono de alérgeno';
         allergenIcon.loading = 'lazy';
         allergenRow.appendChild(allergenIcon);
       });
 
       plato.appendChild(allergenRow);
+    });
+
+    const getFollowingCommentNode = element => {
+      let sibling = element.nextSibling;
+
+      while (sibling && sibling.nodeType === Node.TEXT_NODE && !sibling.textContent.trim()) {
+        sibling = sibling.nextSibling;
+      }
+
+      return sibling && sibling.nodeType === Node.COMMENT_NODE ? sibling : null;
+    };
+
+    document.querySelectorAll('#menu .platos-lista li').forEach(item => {
+      if (item.querySelector('.menu-plato-alergenos')) return;
+
+      const commentNode = getFollowingCommentNode(item);
+      const allergenList = (commentNode ? commentNode.nodeValue : '')
+        .split(',')
+        .map(allergen => allergen.trim())
+        .filter(Boolean)
+        .slice(0, 3);
+
+      const dishName = item.textContent.trim();
+      const englishName = menuEnglishNames[dishName] ?? '';
+
+      item.textContent = '';
+
+      const dishLabel = document.createElement('span');
+      dishLabel.className = 'menu-plato-espanol';
+      dishLabel.textContent = dishName;
+
+      const allergenRow = document.createElement('span');
+      allergenRow.className = 'menu-plato-alergenos';
+      allergenRow.setAttribute('aria-label', `Alergenos: ${allergenList.join(', ')}`);
+
+      allergenList.forEach(allergen => {
+        const allergenIcon = document.createElement('img');
+        allergenIcon.src = resolveAllergenAsset(allergen);
+        allergenIcon.alt = 'Icono de alérgeno';
+        allergenIcon.loading = 'lazy';
+        allergenRow.appendChild(allergenIcon);
+      });
+
+      const englishLabel = document.createElement('span');
+      englishLabel.className = 'menu-plato-ingles';
+      englishLabel.textContent = englishName;
+
+      const priceLabel = document.createElement('span');
+      priceLabel.className = 'menu-plato-precio';
+      priceLabel.setAttribute('aria-hidden', 'true');
+      priceLabel.textContent = '\u00a0';
+
+      item.appendChild(dishLabel);
+      item.appendChild(allergenRow);
+      item.appendChild(englishLabel);
+      item.appendChild(priceLabel);
     });
 
     hamburger.addEventListener('click', () => {
