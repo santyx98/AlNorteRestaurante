@@ -7,6 +7,7 @@
   <title>Al Norte Restaurante — Gijón, Asturias</title>
   <meta name="description"
     content="Restaurante Al Norte en la Plaza del Marqués, Gijón. Cocina del Cantábrico con producto de temporada, pinchos y menú del día." />
+  <link rel="icon" href="assets/alnorte_favicon.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -63,7 +64,8 @@
         <div class="linea-decorativa centrada"></div>
       </div>
       <p class="carta-intro">
-        Sabores del norte y una cocina tradicional asturiana. Fabadas y cachopos son nuestra especialidad. Vistas al puerto deportivo desde el casco antiguo de Gijón.
+        Sabores del norte y una cocina tradicional asturiana. Fabadas y cachopos son nuestra especialidad. Vistas al
+        puerto deportivo desde el casco antiguo de Gijón.
       </p>
 
       <!-- Tabs de categorías -->
@@ -86,6 +88,7 @@
       </div>
 
       <!-- ENTRANTES -->
+      <div class="plato" data-alergenos=""> </div>
       <div class="panel-carta activo" id="panel-entrantes">
         <div class="menu-grid">
           <div class="plato" data-alergenos="huevos,pescado,sulfitos">
@@ -458,6 +461,24 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════
+       ALÉRGENOS
+  ══════════════════════════════════════ -->
+  <section id="alergenos" class="seccion" aria-label="Leyenda de alérgenos">
+    <div class="container">
+      <div style="text-align:center">
+        <p class="titulo-seccion">Alérgenos</p>
+        <div class="linea-decorativa centrada"></div>
+      </div>
+      <div style="text-align:center; margin-top:0.75rem;">
+        <p class="carta-intro">Leyenda de alérgenos y sus significados.</p>
+        <div class="alergenos-imagen" style="max-width:900px; margin:0 auto;">
+          <img src="assets/tabla ALERGENOS leyenda.png" alt="Tabla de alérgenos y su significado"
+            style="width:100%; height:auto; display:block;">
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ══════════════════════════════════════
        CONTACTO
@@ -498,7 +519,7 @@
           </div>
 
 
-          
+
           <!-- ══════════════════════════════════════ telefono y email
           <div class="info-item">
             <span class="info-icono">📞</span>
@@ -549,7 +570,8 @@
       <div class="resenas-grid">
         <div class="resena-card">
           <div class="estrellas">★★★★★</div>
-          <blockquote>"Muy buen sitio, la comida del menu estaba buena y el trato del personal es de diez. Volveremos sin
+          <blockquote>"Muy buen sitio, la comida del menu estaba buena y el trato del personal es de diez. Volveremos
+            sin
             duda."</blockquote>
           <p class="resena-autor">— Reseña Tripadvisor.</p>
         </div>
